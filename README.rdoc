@@ -8,37 +8,37 @@ Include following line in your Gemfile:
   
 = Usage
 
-1. Date formatting
+== Date formatting
 
 Useful when you want user to input formatted dates.
 
   class News < ActiveRecord::Base
     date_format_alias :created_at, '%d/%m/%Y'
   end
-  
+
   item = News.new
   item.created_at_formatted = '12.01.2001'
   item.created_at # 2001-01-12
 
-2. Setting polymorphic attribute.
+== Setting polymorphic attribute.
 
-Useful when you want to set variables from such select:
+  Useful when you want to set variables from such select:
 
-  <select name="imageable">
-    <option value="Image:3">Image</option>
-    <option value="Banner:1">Banner</option>
-    ...
-  </select>
+    <select name="imageable">
+      <option value="Image:3">Image</option>
+      <option value="Banner:1">Banner</option>
+      ...
+    </select>
 
-  class News < ActiveRecord::Base
-    belongs_to :imageable, :polymorphic => true
+    class News < ActiveRecord::Base
+      belongs_to :imageable, :polymorphic => true
     
-    polymorphic_alias :imageable
-  end
+      polymorphic_alias :imageable
+    end
   
-  item = News.new
-  item.imageable = "Image:3"
-  item.imageable_id   # 3
-  item.imageable_type # Image
+    item = News.new
+    item.imageable = "Image:3"
+    item.imageable_id   # 3
+    item.imageable_type # Image
   
 = To be continued...
