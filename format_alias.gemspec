@@ -8,8 +8,14 @@ Gem::Specification.new do |s|
   s.authors     = ["Victor Sokolov"]
   s.email       = ["gzigzigzeo@gmail.com"]
   s.homepage    = "http://github.com/gzigzigzeo/format_alias"
-  s.summary     = %q{ActiveRecord attribute accessor aliases for date formatting etc.}
-  s.description = %q{ActiveRecord attribute accessor aliases for date formatting etc.}
+  s.summary     = %q{
+    Provides virtual attributes to get or set model values in human
+    readable format.
+  }
+  s.description = %q{
+    Provides virtual attributes to get or set certain model values (like
+    dates) in human readable/localized format.
+  }
 
   s.rubyforge_project = "format_alias"
 
@@ -17,10 +23,9 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  
+
   s.add_dependency 'activerecord', '>= 3.0'
-  s.add_dependency 'activesupport', '>= 3.0'  
-  
-  s.add_development_dependency('rspec-rails')  
-  s.add_development_dependency('sqlite3-ruby')
+  s.add_dependency 'activesupport', '>= 3.0'
+
+  s.add_development_dependency('rspec-rails')
 end
