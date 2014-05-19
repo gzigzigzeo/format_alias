@@ -47,6 +47,9 @@ bar.imageable_id   # => 3
 bar.imageable_type # => "Image"
 ```
 
+Accepts same options as `#date_format_alias` plus:
+* `:attributes` - attribute name list (`[:imageable_id, :imageable_type]` for the example above)
+
 ## Roll your own
 
 ## Installation
