@@ -1,9 +1,9 @@
-# Format Alias
+= Format Alias
 
 Provides virtual attributes to get/set certain model values in/to human
 readable format.
 
-## Date formatting
+== Date formatting
 
 ```ruby
 class Foo
@@ -23,7 +23,7 @@ Accepts options:
 * `:getter_name` - name of a getter method
 * `:setter_name` - name of a setter method (without '=')
 
-## Setting polymorphic attribute
+== Setting polymorphic attribute
 
 Useful when you want to set variables from such select:
 
@@ -47,7 +47,7 @@ bar.imageable_id   # => 3
 bar.imageable_type # => "Image"
 ```
 
-## Roll your own
+== Roll your own
 
 ## Installation
 
