@@ -1,3 +1,5 @@
+[DEPRECATED] Use: https://github.com/gzigzigzeo/coerced_accessor instead
+
 # Format Alias
 
 Provides virtual attributes to get/set certain model values in/to human
